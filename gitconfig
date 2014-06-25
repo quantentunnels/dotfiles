@@ -1,0 +1,29 @@
+[user]
+	name = Marius Hintsche
+	email = marius.hintsche@uni-potsdam.de
+[color]
+	ui = auto
+[pack]
+	threads = 0
+[core]
+	editor = vim
+	excludesfile = /home/marius/.gitignore_global
+	autocrlf = input
+[instaweb]
+	browser = firefox
+[gui]
+	fontui = -family \"DejaVu Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"DejaVu Sans Mono\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	diffcontext = 3
+	encoding = utf-8
+
+[diff "pdf"]
+    textconv = pdf2txt
+
+[diff "dip"]
+    textconv = strings
+
+[format]
+;	pretty = oneline
+[diff]
+	tool = vimdiff
