@@ -91,11 +91,11 @@ match todo /FIXME/
 " set appropriate background color (needs to check for light or dark!)
 if has('gui_running')
   let g:vimroom_guibackground='#fdf6e3'
-else
-  let g:vimroom_background = 8
 endif
 let g:vimroom_width=86
-let g:vimroom_navigational_keys=0	" disable key remaping
+" let g:vimroom_navigational_keys=0	" disable key remaping
+" let g:vimroom_clear_line_numbers=0	" leave line numbers on
+
 
 " ##### Vim-Latex #####
 " #####################
