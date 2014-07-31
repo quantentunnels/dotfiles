@@ -122,6 +122,7 @@ let g:tex_flavor='latex'
 "autocmd BufEnter *.m    compiler mlint 
 " set tabstops etc. to 4 spaces
 autocmd FileType matlab setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType pandoc setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 " ##### Taglist opts #####
 " ########################
