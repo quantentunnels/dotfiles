@@ -42,12 +42,14 @@ let mapleader = '\'	" leader
 
 set mouse=a	" enable mouse support also in terminals
 
+set noswapfile
 set directory=~/tmp,/tmp,/var/tmp	" where to put swap and backup files
 set backupdir=~/tmp,/tmp,/var/tmp
 set autoread	" automatically load file on change
 
 syntax on	" syntax highlighting on
 set number	" show line numbers
+set scrolloff=7
 
 set smartindent	" Automatische Einrückung (Globale Konfiguration)
 set smarttab
@@ -82,9 +84,8 @@ set cursorline
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 " Todo, Fixme, etc.
-highlight todo ctermbg=green guibg=green
+highlight todo term=bold ctermfg=4 guifg=#dc322f
 match todo /TODO/
-highlight todo ctermbg=green guibg=green
 match todo /FIXME/
 
 " ##### Vimroom #####
