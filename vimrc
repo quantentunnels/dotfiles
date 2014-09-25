@@ -109,10 +109,26 @@ set shellslash
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
 
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
+" TIP: if you write your \label's as \label{fig:something}, then if you
+" type in \ref{fig: and press <C-n> you will automatically cycle through
+" all the figure labels. Very useful!
+set iskeyword+=:
+
+let g:Tex_DefaultTargetFormat = 'pdf' " set default tex target to latex
+let g:Tex_MultipleCompileFormats = 'dvi,pdf' " make shure pdf targets are compiled multiple times if neccecary
+let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 -interaction=nonstopmode $*' " set tex compile target to use synctex for forwards search in viewer
+" WINDOWS: set SumatraPDF as viewer and set it up for backwards search
+"let g:Tex_ViewRule_pdf = 'SumatraPDF -inverse-search "gvim -c \":RemoteOpen +\%l \%f\""'
+
+" modify environment mappings
+let g:Tex_PromptedEnvironments =
+	\ 'equation,equation*,align,align*,$$,eqnarray*,eqnarray'
+let g:Tex_HotKeyMappings = 
+	\ 'equation*,equation,bmatrix'
+
+" only a little indentation but tabstops stay longer
+autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+
 
 " ##### MATLAB #####
 " ##################
