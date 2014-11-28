@@ -53,6 +53,7 @@ set scrolloff=7
 
 set smartindent	" Automatische Einrückung (Globale Konfiguration)
 set smarttab
+set expandtab shiftwidth=4 tabstop=4 softtabstop=4 " always expand tabs to 4 spaces
 
 set ignorecase	" suche standardmäßig case insensitve
 set smartcase	" smart case bei der Suche mit /
@@ -139,20 +140,13 @@ autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 "autocmd BufEnter *.m    compiler mlint 
 " set tabstops etc. to 4 spaces
 autocmd FileType matlab setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType pandoc setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
-" ##### Taglist opts #####
+" ##### vim-pandoc options #####
 " ########################
 
-" path to ctags
-"let Tlist_Ctags_Cmd="\"C:/Program Files/ctags58/ctags.exe\""
-" show taglist menu in gvim
-let Tlist_Show_Menu=1
+autocmd FileType pandoc setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
-" ##### Python coding convention #####
-" Ein Tab entspricht vier Leerzeichen (wie in PEP 8 definiert)
-" Dies aber nur für python, damit es nicht mit anderen (ruby, c, Makefiles) kollidiert
-autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+let g:pandoc#command#latex_engine = 'pdflatex'
 
 " ##### My mappings #####
 " Taglist plugin
