@@ -12,6 +12,7 @@ Bundle 'gmarik/Vundle.vim'
 " My Bundles here:
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
 Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'chikamichi/mediawiki.vim'
 
