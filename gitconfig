@@ -17,15 +17,18 @@
 	diffcontext = 3
 	encoding = utf-8
 
+[diff]
+    tool = vimdiff
+[difftool "diffpdf"]
+	cmd = diffpdf \"$LOCAL\" \"$REMOTE\"
 [diff "pdf"]
-    textconv = pdf2txt
-
+    textconv = pdf2text
+    tool=diffpdf
 [diff "dip"]
     textconv = strings
 
 [format]
 ;	pretty = oneline
-[diff]
-	tool = vimdiff
+
 [push]
 	default = simple
