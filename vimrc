@@ -7,22 +7,25 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'vim-pandoc/vim-pandoc'
-Bundle 'chikamichi/mediawiki.vim'
+" My Plugins here:
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 
-Bundle 'sgeb/vim-matlab'
-Bundle 'djoshea/vim-matlab-fold'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'chikamichi/mediawiki.vim'
+Plugin 'sgeb/vim-matlab'
+Plugin 'djoshea/vim-matlab-fold'
 
-Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
-"Bundle 'VOoM'
 
-Bundle 'mikewest/vimroom'
+" TODO change to better tex plugin (automatic latex)
+Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+"Plugin 'VOoM'
+
+Plugin 'mikewest/vimroom'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
@@ -61,6 +64,8 @@ set smartcase	" smart case bei der Suche mit /
 
 set diffopt=filler,vertical	" always split vertical for diffs
 
+set laststatus=2    " alsways show statusline
+
 set spelllang=en_us,de_20	" set recognized languages
 
 
@@ -89,6 +94,16 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 highlight todo term=bold ctermfg=4 guifg=#dc322f
 match todo /TODO/
 match todo /FIXME/
+
+" ##### Airline #####
+let g:airline_left_sep = '▶'
+let g:airline_right_sep= '◀'
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.linenr = '␤'
 
 " ##### Vimroom #####
 " set appropriate background color (needs to check for light or dark!)
