@@ -19,8 +19,11 @@
 
 [diff]
     tool = vimdiff
-[difftool "diffpdf"]
+[difftool "pdfdiff"]
 	cmd = diffpdf \"$LOCAL\" \"$REMOTE\"
+[difftool "latexdiff"]
+    cmd = git-latexdiff \"$LOCAL\" \"$REMOTE\"
+
 [diff "pdf"]
     textconv = pdf2text
     tool=diffpdf
