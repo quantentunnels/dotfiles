@@ -16,6 +16,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold'
@@ -25,7 +26,7 @@ Plugin 'djoshea/vim-matlab-fold'
 Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 "Plugin 'VOoM'
 
-Plugin 'mikewest/vimroom'
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
@@ -96,6 +97,9 @@ match todo /TODO/
 match todo /FIXME/
 
 " ##### Airline #####
+" disable whitespace checking
+let g:airline#extensions#whitespace#enabled = 1
+
 let g:airline_left_sep = '▶'
 let g:airline_right_sep= '◀'
 
@@ -105,14 +109,7 @@ endif
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.linenr = '␤'
 
-" ##### Vimroom #####
-" set appropriate background color (needs to check for light or dark!)
-if has('gui_running')
-  let g:vimroom_guibackground='#fdf6e3'
-endif
-let g:vimroom_width=86
-" let g:vimroom_navigational_keys=0	" disable key remaping
-" let g:vimroom_clear_line_numbers=0	" leave line numbers on
+" ##### Goyo #####
 
 
 " ##### Vim-Latex #####
@@ -134,6 +131,7 @@ set iskeyword+=:
 let g:Tex_DefaultTargetFormat = 'pdf' " set default tex target to latex
 let g:Tex_MultipleCompileFormats = 'dvi,pdf' " make shure pdf targets are compiled multiple times if neccecary
 let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 -interaction=nonstopmode $*' " set tex compile target to use synctex for forwards search in viewer
+let g:Tex_ViewRule_pdf = 'evince_dbus.py'
 " WINDOWS: set SumatraPDF as viewer and set it up for backwards search
 "let g:Tex_ViewRule_pdf = 'SumatraPDF -inverse-search "gvim -c \":RemoteOpen +\%l \%f\""'
 

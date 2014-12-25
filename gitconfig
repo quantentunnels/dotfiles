@@ -38,6 +38,7 @@
 	default = simple
 
 [alias]
+    st = "status"
     #wrap long commit messages
     #lg = "log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %w(65,0,12)%s' --abbrev-commit"
 
