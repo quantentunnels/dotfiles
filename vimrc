@@ -75,6 +75,7 @@ set spelllang=en_us,de_20	" set recognized languages
 
 " Colorscheme for Terminal
 colorscheme solarized
+let g:solarized_menu=0
 if has('gui_running')
 	set background=light
 	set guifont=DejaVu\ Sans\ Mono\ 12
@@ -121,7 +122,7 @@ set shellslash
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
+"set grepprg=grep\ -nH\ $*
 
 " TIP: if you write your \label's as \label{fig:something}, then if you
 " type in \ref{fig: and press <C-n> you will automatically cycle through
