@@ -132,7 +132,7 @@ set iskeyword+=:
 let g:Tex_DefaultTargetFormat = 'pdf' " set default tex target to latex
 let g:Tex_MultipleCompileFormats = 'dvi,pdf' " make shure pdf targets are compiled multiple times if neccecary
 let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 -interaction=nonstopmode $*' " set tex compile target to use synctex for forwards search in viewer
-let g:Tex_ViewRule_pdf = 'evince_dbus.py'
+let g:Tex_ViewRule_pdf = 'evince'
 " WINDOWS: set SumatraPDF as viewer and set it up for backwards search
 "let g:Tex_ViewRule_pdf = 'SumatraPDF -inverse-search "gvim -c \":RemoteOpen +\%l \%f\""'
 

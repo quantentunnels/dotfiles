@@ -23,7 +23,6 @@
 	cmd = diffpdf \"$LOCAL\" \"$REMOTE\"
 [difftool "latexdiff"]
     cmd = git-latexdiff \"$LOCAL\" \"$REMOTE\"
-
 [diff "pdf"]
     textconv = pdf2text
     tool=diffpdf
@@ -31,19 +30,17 @@
 [diff "dip"]
     textconv = strings
 
-[format]
-;	pretty = oneline
-
 [push]
 	default = simple
 
 [alias]
     st = "status"
+	wdiff = diff --color-words
+
+    #nice log format:
     #wrap long commit messages
     #lg = "log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %w(65,0,12)%s' --abbrev-commit"
-
     #truncate commit messages
     lg = "log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %<(50,trunc)%s' --abbrev-commit"
-
     #original format
     #lg = "log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %w(50,1,2)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
