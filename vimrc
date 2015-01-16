@@ -52,9 +52,11 @@ set directory=~/tmp,/tmp,/var/tmp	" where to put swap and backup files
 set backupdir=~/tmp,/tmp,/var/tmp
 set autoread	" automatically load file on change
 
+set path+=**    " allow the use of :find to recursivley search for files
+
 syntax on	" syntax highlighting on
 set number	" show line numbers
-set scrolloff=7
+set scrolloff=5
 
 set smartindent	" Automatische Einrückung (Globale Konfiguration)
 set smarttab
@@ -111,7 +113,7 @@ let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.linenr = '␤'
 
 " ##### Goyo #####
-
+let g:goyo_linenr = 0
 
 " ##### Vim-Latex #####
 " #####################
@@ -164,17 +166,16 @@ autocmd FileType pandoc setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 let g:pandoc#command#latex_engine = 'pdflatex'
 
 " ##### My mappings #####
-" Taglist plugin
-nnoremap <silent> <F8> :TlistToggle<CR>
-" change current directory to where the opend file resides in
+" set working dir to current dir
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
-" Explore current directory to where the opend file resides in
+" :Explore current directory to where the opend file resides in
 nnoremap <leader>E :E %:p:h<CR>
 " vim-latex save and compile
 nnoremap <F2> :w<CR><leader>ll
 " toggle search highlighting
-nnoremap <leader>hl set hlsearch!<CR>
-
+nnoremap <F7> :set hlsearch!<CR>
+" toogle Goyo
+nmap <F12> :Goyo<CR>
 
 " ##### Windows specific settings #####
 " adjust configuration for such hostile environment as Windows {{{
