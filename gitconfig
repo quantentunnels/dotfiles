@@ -44,3 +44,6 @@
     lg = "log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %<(50,trunc)%s' --abbrev-commit"
     #original format
     #lg = "log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %w(50,1,2)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+    #show whole tree
+    lt = "lg --graph --all"
