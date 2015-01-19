@@ -30,6 +30,9 @@
 [diff "dip"]
     textconv = strings
 
+[merge]
+    tool = vimdiff
+
 [push]
 	default = simple
 
