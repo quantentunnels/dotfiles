@@ -173,7 +173,7 @@ nnoremap <leader>E :E %:p:h<CR>
 " vim-latex save and compile
 nnoremap <F2> :w<CR><leader>ll
 " toggle search highlighting
-nnoremap <F7> :set hlsearch!<CR>
+nnoremap <F7> set hlsearch!<CR>
 " toogle Goyo
 nmap <F12> :Goyo<CR>
 
