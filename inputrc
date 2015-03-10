@@ -1,1 +1,3 @@
 set editing-mode vi
+
+alias matlabhl='matlab -nosplash -nodesktop -nodisplay'
