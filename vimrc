@@ -55,11 +55,13 @@ set directory=~/tmp,/tmp,/var/tmp	" where to put swap and backup files
 set backupdir=~/tmp,/tmp,/var/tmp
 set autoread	" automatically load file on change
 
+set hlsearch
+set incsearch   " show match instantaneously while typing
 set path+=**    " allow the use of :find to recursivley search for files
 
 syntax on	" syntax highlighting on
 set number	" show line numbers
-set scrolloff=5
+set scrolloff=3
 
 set smartindent	" Automatische Einrückung (Globale Konfiguration)
 set smarttab
@@ -174,7 +176,9 @@ nnoremap <leader>E :E %:p:h<CR>
 " vim-latex save and compile
 nnoremap <F2> :w<CR><leader>ll
 " toggle search highlighting
-nnoremap <F7> set hlsearch!<CR>
+nnoremap <F7> :set hlsearch!<CR>
+" mute search highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " toogle Goyo
 nmap <F12> :Goyo<CR>
 
