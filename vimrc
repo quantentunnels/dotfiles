@@ -12,9 +12,12 @@ Plugin 'gmarik/Vundle.vim'
 " My Plugins here:
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
@@ -52,11 +55,13 @@ set directory=~/tmp,/tmp,/var/tmp	" where to put swap and backup files
 set backupdir=~/tmp,/tmp,/var/tmp
 set autoread	" automatically load file on change
 
+set hlsearch
+set incsearch   " show match instantaneously while typing
 set path+=**    " allow the use of :find to recursivley search for files
 
 syntax on	" syntax highlighting on
 set number	" show line numbers
-set scrolloff=5
+set scrolloff=3
 
 set smartindent	" Automatische Einrückung (Globale Konfiguration)
 set smarttab
@@ -66,6 +71,8 @@ set ignorecase	" suche standardmäßig case insensitve
 set smartcase	" smart case bei der Suche mit /
 
 set diffopt=filler,vertical	" always split vertical for diffs
+
+set splitright
 
 set laststatus=2    " alsways show statusline
 
@@ -102,6 +109,8 @@ match todo /FIXME/
 " ##### Airline #####
 " disable whitespace checking
 let g:airline#extensions#whitespace#enabled = 1
+
+let g:airline#extensions#bufferline#enabled = 1
 
 let g:airline_left_sep = '▶'
 let g:airline_right_sep= '◀'
@@ -151,17 +160,11 @@ autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 " ##### MATLAB #####
 " ##################
 
-" from the matlab.vim package
-"source $VIMRUNTIME/macros/matchit.vim 
 " for the mlint compiler
-"autocmd BufEnter *.m    compiler mlint 
-" set tabstops etc. to 4 spaces
-autocmd FileType matlab setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd BufEnter *.m    compiler mlint 
 
 " ##### vim-pandoc options #####
 " ########################
-
-autocmd FileType pandoc setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 let g:pandoc#command#latex_engine = 'pdflatex'
 
@@ -173,7 +176,9 @@ nnoremap <leader>E :E %:p:h<CR>
 " vim-latex save and compile
 nnoremap <F2> :w<CR><leader>ll
 " toggle search highlighting
-nnoremap <F7> set hlsearch!<CR>
+nnoremap <F7> :set hlsearch!<CR>
+" mute search highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " toogle Goyo
 nmap <F12> :Goyo<CR>
 

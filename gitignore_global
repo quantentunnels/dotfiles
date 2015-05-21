@@ -1,59 +1,39 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# It's better to unpack these files and commit the raw source because
-# git has its own built in compression methods.
-*.7z
-*.jar
-*.rar
-*.zip
-*.gz
-*.bzip
-*.bz2
-*.xz
-*.lzma
-
-#packing-only formats
-*.iso
-*.tar
-
-#package management formats
-*.dmg
-*.xpi
-*.gem
-*.egg
-*.deb
-*.rpm
-
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
-
 # Linux #
 #########
-.*
-!.gitignore
-!.gitattributes
 *~
 
-# Ignore tags created by etags and ctags
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# Tags #
+########
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
 TAGS
 !TAGS/
 tags
 !tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
 
 # VIM #
 #######
-.*.s[a-w][a-z]
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
 *~
+
+# LibreOffice #
+###############
+# LibreOffice locks
+.~lock.*#
