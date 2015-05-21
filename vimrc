@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " My Plugins here:
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
+"Plugin 'bling/vim-bufferline'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
@@ -110,7 +110,7 @@ match todo /FIXME/
 " disable whitespace checking
 let g:airline#extensions#whitespace#enabled = 1
 
-let g:airline#extensions#bufferline#enabled = 1
+"let g:airline#extensions#bufferline#enabled = 1
 
 let g:airline_left_sep = '▶'
 let g:airline_right_sep= '◀'
