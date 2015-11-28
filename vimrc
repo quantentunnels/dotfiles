@@ -169,6 +169,8 @@ autocmd BufEnter *.m    compiler mlint
 let g:pandoc#command#latex_engine = 'pdflatex'
 
 " ##### My mappings #####
+" diable dreadful Q
+noremap Q <Nop>
 " set working dir to current dir
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 " :Explore current directory to where the opend file resides in
