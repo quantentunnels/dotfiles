@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="inputrc tmux.conf vimrc gitconfig gitignore_global bash_aliases"    # list of files/folders to symlink in homedir
+files="vimrc inputrc Xresources tmux.conf gitconfig gitignore_global bash_aliases"    # list of files/folders to symlink in homedir
 #files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"
 
 ##########

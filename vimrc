@@ -22,6 +22,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
+" TODO does the matlab folding even work?
 Plugin 'djoshea/vim-matlab-fold'
 
 
@@ -83,8 +84,6 @@ set spelllang=en_us,de_20	" set recognized languages
 " #################################
 
 " Colorscheme for Terminal
-colorscheme solarized
-let g:solarized_menu=0
 if has('gui_running')
 	set background=light
 	set guifont=DejaVu\ Sans\ Mono\ 12
@@ -94,6 +93,8 @@ else
 	set t_Co=16 "use the 16 terminal colors
 	set background=dark
 end
+colorscheme solarized
+let g:solarized_menu=0
 
 "highligt current line
 set cursorline
