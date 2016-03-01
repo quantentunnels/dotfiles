@@ -14,6 +14,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 "Plugin 'bling/vim-bufferline'
 
+"my ijmacro syntax plugin
+Plugin 'quantentunnels/vim-ijmacro'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-unimpaired'

@@ -9,6 +9,7 @@
 	editor = vim
 	excludesfile = /home/marius/.gitignore_global
 	autocrlf = input
+    #pager = less -r #leads to unwanted line breaks in git log
 [instaweb]
 	browser = firefox
 [gui]
