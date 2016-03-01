@@ -47,37 +47,37 @@ runtime macros/matchit.vim
 " ##### Allgemeine settings #####
 " ###############################
 
-let mapleader = '\'	" leader
+let mapleader = '\' " leader
 
-set mouse=a	" enable mouse support also in terminals
+set mouse=a " enable mouse support also in terminals
 
 set noswapfile
-set directory=~/tmp,/tmp,/var/tmp	" where to put swap and backup files
+set directory=~/tmp,/tmp,/var/tmp   " where to put swap and backup files
 set backupdir=~/tmp,/tmp,/var/tmp
-set autoread	" automatically load file on change
+set autoread    " automatically load file on change
 
 set hlsearch
 set incsearch   " show match instantaneously while typing
 set path+=**    " allow the use of :find to recursivley search for files
 
-syntax on	" syntax highlighting on
-set number	" show line numbers
+syntax on   " syntax highlighting on
+set number  " show line numbers
 set scrolloff=3
 
-set smartindent	" Automatische Einrückung (Globale Konfiguration)
+set smartindent " Automatische Einrückung (Globale Konfiguration)
 set smarttab
 set expandtab shiftwidth=4 tabstop=4 softtabstop=4 " always expand tabs to 4 spaces
 
-set ignorecase	" suche standardmäßig case insensitve
-set smartcase	" smart case bei der Suche mit /
+set ignorecase  " suche standardmäßig case insensitve
+set smartcase   " smart case bei der Suche mit /
 
-set diffopt=filler,vertical	" always split vertical for diffs
+set diffopt=filler,vertical " always split vertical for diffs
 
 set splitright
 
 set laststatus=2    " alsways show statusline
 
-set spelllang=en_us,de_20	" set recognized languages
+set spelllang=en_us,de_20   " set recognized languages
 
 
 " ##### Colors & Highlighting #####
@@ -85,16 +85,16 @@ set spelllang=en_us,de_20	" set recognized languages
 
 " Colorscheme for Terminal
 if has('gui_running')
-	set background=light
-	set guifont=DejaVu\ Sans\ Mono\ 12
-	"set columns=90
-	"set lines=45 
+    let g:solarized_menu=0
+    set background=light
+    set guifont=DejaVu\ Sans\ Mono\ 12
+    "set columns=90
+    "set lines=45 
 else
-	set t_Co=16 "use the 16 terminal colors
-	set background=dark
+    set t_Co=16 "use the 16 terminal colors
+    set background=dark
 end
 colorscheme solarized
-let g:solarized_menu=0
 
 "highligt current line
 set cursorline
@@ -103,9 +103,9 @@ set cursorline
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 " Todo, Fixme, etc.
-highlight todo term=bold ctermfg=4 guifg=#dc322f
-match todo /TODO/
-match todo /FIXME/
+highlight fixme term=reverse cterm=reverse ctermfg=1 guifg=#dc322f
+"match fixme /TODO/
+match fixme /FIXME/
 
 " ##### Airline #####
 " disable whitespace checking
@@ -150,9 +150,9 @@ let g:Tex_ViewRule_pdf = 'evince'
 
 " modify environment mappings
 let g:Tex_PromptedEnvironments =
-	\ 'equation,equation*,align,align*,$$,eqnarray*,eqnarray'
-let g:Tex_HotKeyMappings = 
-	\ 'equation*,equation,bmatrix'
+    \ 'equation,equation*,align,align*,$$,eqnarray*,eqnarray'
+let g:Tex_HotKeyMappings =
+    \ 'equation*,equation,bmatrix'
 
 " only a little indentation but tabstops stay longer
 autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
