@@ -11,11 +11,13 @@ Plugin 'gmarik/Vundle.vim'
 
 " My Plugins here:
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-"Plugin 'bling/vim-bufferline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
-"my ijmacro syntax plugin
-Plugin 'quantentunnels/vim-ijmacro'
+"Plugin 'bling/vim-bufferline'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'keith/tmux.vim'
+Plugin 'junegunn/goyo.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
@@ -25,15 +27,10 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
-" TODO does the matlab folding even work?
-Plugin 'djoshea/vim-matlab-fold'
-
-
-" TODO change to better tex plugin (automatic latex)
-Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
+Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
+Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex' " TODO change to better tex plugin (automatic latex)
 "Plugin 'VOoM'
-
-Plugin 'junegunn/goyo.vim'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
@@ -111,10 +108,7 @@ highlight fixme term=reverse cterm=reverse ctermfg=1 guifg=#dc322f
 match fixme /FIXME/
 
 " ##### Airline #####
-" disable whitespace checking
-let g:airline#extensions#whitespace#enabled = 1
-
-"let g:airline#extensions#bufferline#enabled = 1
+"let g:airline_theme = 'solarized'
 
 let g:airline_left_sep = '▶'
 let g:airline_right_sep= '◀'
@@ -125,8 +119,22 @@ endif
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.linenr = '␤'
 
+" disable whitespace checking
+"let g:airline#extensions#whitespace#enabled = 1
+"let g:airline#extensions#bufferline#enabled = 1
+
 " ##### Goyo #####
 let g:goyo_linenr = 0
+
+" ##### Tmux #####
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
+nnoremap <silent> <C-S-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-S-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-S-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-S-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
+
 
 " ##### Vim-Latex #####
 " #####################
