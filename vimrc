@@ -192,7 +192,7 @@ nnoremap <F2> :w<CR><leader>ll
 " toggle search highlighting
 nnoremap <F7> :set hlsearch!<CR>
 " mute search highlighting
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <C-p> :<C-u>nohlsearch<CR><C-p>
 " toogle Goyo
 nmap <F12> :Goyo<CR>
 
