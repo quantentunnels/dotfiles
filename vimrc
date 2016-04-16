@@ -59,6 +59,7 @@ set autoread    " automatically load file on change
 set hlsearch
 set incsearch   " show match instantaneously while typing
 set path+=**    " allow the use of :find to recursivley search for files
+set wildignore+=tags
 
 syntax on   " syntax highlighting on
 set number  " show line numbers
@@ -129,10 +130,11 @@ let g:goyo_linenr = 0
 " ##### Tmux #####
 let g:tmux_navigator_no_mappings = 1
 let g:tmux_navigator_save_on_switch = 1
-nnoremap <silent> <C-S-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-S-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-S-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-S-l> :TmuxNavigateRight<cr>
+let g:BASH_Ctrl_j = 'off' " turn of bash line feed for the following to work
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 
 
