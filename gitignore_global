@@ -2,6 +2,9 @@
 #########
 *~
 
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
 # KDE directory preferences
 .directory
 
@@ -12,8 +15,10 @@
 ########
 # Ignore tags created by etags, ctags, gtags (GNU global) and cscope
 TAGS
+.TAGS
 !TAGS/
 tags
+.tags
 !tags/
 gtags.files
 GTAGS
@@ -26,10 +31,12 @@ cscope.po.out
 
 # VIM #
 #######
+# swap
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
-*.un~
+# session
 Session.vim
+# temporary
 .netrwhist
 *~
 

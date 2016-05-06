@@ -7,7 +7,7 @@
 	threads = 0
 [core]
 	editor = vim
-	excludesfile = /home/marius/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
     #pager = less -r #leads to unwanted line breaks in git log
 [instaweb]
