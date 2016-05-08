@@ -7,31 +7,31 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins here:
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-"Plugin 'bling/vim-bufferline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'keith/tmux.vim'
 Plugin 'junegunn/goyo.vim'
-
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'freitass/todo.txt-vim'
+
+"Language/Syntax support
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
-Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
-Plugin 'Align'
+"Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
 Plugin 'coot/atp_vim' "Automatic Latex Plugin
+Plugin 'Align' " requiered for ATP (line above)
+Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
 
 call vundle#end()            " required
 filetype plugin indent on     " required!

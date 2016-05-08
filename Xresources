@@ -7,6 +7,9 @@ Xft*hinting:   full
 URxvt.font: xft:DejaVu\ Sans\ Mono:size=12
 URxvt.scrollBar: false
 URxvt.intensityStyles: false
+URxvt.mouseWheelScrollPage: false
+URxvt.iso14755: false
+
 
 !-*- Perl extensions -*-
 URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
