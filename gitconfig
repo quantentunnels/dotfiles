@@ -10,13 +10,14 @@
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
     #pager = less -r #leads to unwanted line breaks in git log
-[instaweb]
+[web]
 	browser = firefox
-[gui]
-	fontui = -family \"DejaVu Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family \"DejaVu Sans Mono\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
-	diffcontext = 3
-	encoding = utf-8
+
+#[gui]
+#	fontui = -family \"DejaVu Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+#	fontdiff = -family \"DejaVu Sans Mono\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+#	diffcontext = 3
+#	encoding = utf-8
 
 [diff]
     tool = vimdiff
@@ -28,8 +29,14 @@
     textconv = pdf2text
     tool=diffpdf
     word-diff=plain
-[diff "dip"]
-    textconv = strings
+[diff "tex"]
+    tool=latexdiff
+[diff "ods"]
+    textconv = unoconv --stdout --format csv -e FilterOptions=59/9,34,9,1
+    word-diff=plain
+[diff "odt"]
+    textconv = unoconv --stdout --format txt
+    word-diff=plain
 
 [merge]
     tool = vimdiff
@@ -39,7 +46,7 @@
 
 [alias]
     st = "status -sb"
-	wdiff = diff --color-words
+	wdiff = diff --word-diff
 
     #nice log format:
     #wrap long commit messages
