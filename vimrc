@@ -7,30 +7,31 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins here:
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-"Plugin 'bling/vim-bufferline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'keith/tmux.vim'
 Plugin 'junegunn/goyo.vim'
-
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
+Plugin 'freitass/todo.txt-vim'
+
+"Language/Syntax support
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
-Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
-Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex' " TODO change to better tex plugin (automatic latex)
-"Plugin 'VOoM'
+"Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
+Plugin 'coot/atp_vim' "Automatic Latex Plugin
+Plugin 'Align' " requiered for ATP (line above)
+Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
@@ -138,37 +139,18 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 
 
-" ##### Vim-Latex #####
-" #####################
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
+" ##### Vim-ATP (Latex) #####
+" ###########################
+let b:atp_Viewer = 'evince'
 
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-"set grepprg=grep\ -nH\ $*
-
-" TIP: if you write your \label's as \label{fig:something}, then if you
-" type in \ref{fig: and press <C-n> you will automatically cycle through
-" all the figure labels. Very useful!
-set iskeyword+=:
-
-let g:Tex_DefaultTargetFormat = 'pdf' " set default tex target to latex
-let g:Tex_MultipleCompileFormats = 'dvi,pdf' " make shure pdf targets are compiled multiple times if neccecary
-let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 -interaction=nonstopmode $*' " set tex compile target to use synctex for forwards search in viewer
-let g:Tex_ViewRule_pdf = 'evince'
-" WINDOWS: set SumatraPDF as viewer and set it up for backwards search
-"let g:Tex_ViewRule_pdf = 'SumatraPDF -inverse-search "gvim -c \":RemoteOpen +\%l \%f\""'
-
-" modify environment mappings
-let g:Tex_PromptedEnvironments =
-    \ 'equation,equation*,align,align*,$$,eqnarray*,eqnarray'
-let g:Tex_HotKeyMappings =
-    \ 'equation*,equation,bmatrix'
-
-" only a little indentation but tabstops stay longer
-autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+" " modify environment mappings
+" let g:Tex_PromptedEnvironments =
+"     \ 'equation,equation*,align,align*,$$,eqnarray*,eqnarray'
+" let g:Tex_HotKeyMappings =
+"     \ 'equation*,equation,bmatrix'
+" 
+" " only a little indentation but tabstops stay longer
+" autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 
 " ##### MATLAB #####
