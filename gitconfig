@@ -27,7 +27,7 @@
     cmd = git-latexdiff \"$LOCAL\" \"$REMOTE\"
 [diff "pdf"]
     textconv = pdf2text
-    tool=diffpdf
+    tool=pdfdiff
     word-diff=plain
 [diff "tex"]
     tool=latexdiff

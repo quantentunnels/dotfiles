@@ -31,7 +31,7 @@ Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
 "Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
 Plugin 'coot/atp_vim' "Automatic Latex Plugin
 Plugin 'Align' " requiered for ATP (line above)
-Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
+"Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
