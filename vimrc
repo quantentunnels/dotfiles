@@ -49,7 +49,7 @@ runtime macros/matchit.vim
 " ###############################
 
 let mapleader = '\' " leader
-
+map Q <Nop> " disable ex mode
 set mouse=a " enable mouse support also in terminals
 
 set noswapfile
@@ -126,7 +126,7 @@ let g:airline_symbols.linenr = '␤'
 "let g:airline#extensions#bufferline#enabled = 1
 
 " ##### Goyo #####
-let g:goyo_linenr = 0
+let g:goyo_linenr = 1
 
 " ##### Tmux #####
 let g:tmux_navigator_no_mappings = 1
