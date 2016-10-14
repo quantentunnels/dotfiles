@@ -29,8 +29,8 @@ Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
 "Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
-Plugin 'coot/atp_vim' "Automatic Latex Plugin
-Plugin 'Align' " requiered for ATP (line above)
+Plugin 'lervag/vimtex' "Latex compilation Plugin
+"Plugin 'Align' " requiered for ATP (line above)
 "Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
 
 call vundle#end()            " required
@@ -174,7 +174,7 @@ nnoremap <leader>E :E %:p:h<CR>
 " vim-latex save and compile
 nnoremap <F2> :w<CR><leader>ll
 " toggle search highlighting
-nnoremap <F7> :set hlsearch!<CR>
+nnoremap <F9> :set hlsearch!<CR>
 " mute search highlighting
 nnoremap <silent> <C-p> :<C-u>nohlsearch<CR><C-p>
 " toogle Goyo
