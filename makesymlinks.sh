@@ -44,3 +44,9 @@ done
 if [ "$nMoved" -ge 1 ]; then
     echo "Moved $nMoved existing dotfiles from ~ to $olddir."
 fi
+
+# install vim plugins with Vundle
+echo -n "Installing vim plugins"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+echo "done"
