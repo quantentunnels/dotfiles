@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc inputrc Xresources tmux.conf gitconfig gitignore_global bash_aliases vim/spell/en.utf-8.add vim/spell/de.utf-8.add"
+files="vimrc inputrc Xresources tmux.conf gitconfig gitignore_global bash_aliases vim/spell/en.utf-8.add vim/spell/de.utf-8.add config/redshift.conf xscreensaver"
 #files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"
 
 ##########
