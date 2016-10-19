@@ -8,8 +8,11 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc inputrc Xresources tmux.conf gitconfig gitignore_global bash_aliases vim/spell/en.utf-8.add vim/spell/de.utf-8.add config/redshift.conf xscreensaver"
-#files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"
+# list of files to link
+files="inputrc Xresources bash_aliases tmux.conf "
+files+="vimrc vim/spell/en.utf-8.add vim/spell/de.utf-8.add "
+file+="gitconfig gitignore_global "
+files+="config/redshift.conf config/zathura/zathurarc xscreensaver"
 
 ##########
 
@@ -24,9 +27,20 @@ cd $dir
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+nMoved=0
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    if [ ! -L ~/.$file ]; then
+        if [ -e ~/.$file ]; then
+            echo -n "Moving old .$file to $olddir, "
+            mv ~/.$file ~/dotfiles_old/
+            ((nMoved+=1))
+        fi
+        echo "Creating symlink to .$file"
+        ln -s $dir/$file ~/.$file
+    else
+        echo "Found existing symlink to .$file"
+    fi
 done
+if [ "$nMoved" -ge 1 ]; then
+    echo "Moved $nMoved existing dotfiles from ~ to $olddir."
+fi
