@@ -139,9 +139,9 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 
 
-" ##### Vim-ATP (Latex) #####
+" ##### vimtex (Latex) #####
 " ###########################
-let b:atp_Viewer = 'evince'
+let g:vimtex_view_method = 'zathura'
 
 " " modify environment mappings
 " let g:Tex_PromptedEnvironments =
