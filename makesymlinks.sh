@@ -11,7 +11,7 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files to link
 files="inputrc Xresources bash_aliases tmux.conf "
 files+="vimrc vim/spell/en.utf-8.add vim/spell/de.utf-8.add "
-file+="gitconfig gitignore_global "
+files+="gitconfig gitignore_global "
 files+="config/redshift.conf config/zathura/zathurarc xscreensaver"
 
 ##########
