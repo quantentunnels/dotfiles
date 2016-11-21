@@ -1,10 +1,10 @@
 #!/bin/bash
-############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-############################
 
-########## Variables
+# makesymlinks.sh
+# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+
+
+## Variables
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
@@ -14,19 +14,23 @@ files+="vimrc vim/spell/en.utf-8.add vim/spell/de.utf-8.add "
 files+="gitconfig gitignore_global "
 files+="config/redshift.conf config/zathura/zathurarc xscreensaver"
 
-##########
 
-# create dotfiles_old in homedir
+## Take care of directories
+
+#create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "done"
 
-# change to the dotfiles directory
+#change to the dotfiles directory
 echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+
+## Backup old files and make symlinks
+
+#move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 nMoved=0
 for file in $files; do
     if [ ! -L ~/.$file ]; then
@@ -45,8 +49,11 @@ if [ "$nMoved" -ge 1 ]; then
     echo "Moved $nMoved existing dotfiles from ~ to $olddir."
 fi
 
-# install vim plugins with Vundle
-echo -n "Installing vim plugins"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-echo "done"
+## Install vim plugins with Vundle
+vundlePath="~/.vim/bundle/Vundle.vim"
+if [ ! -e $vundlePath ]; then
+    echo -n "Installing vim plugins... "
+    git clone https://github.com/VundleVim/Vundle.vim.git $vundlePath
+    vim +PluginInstall +qall
+    echo "done"
+fi
