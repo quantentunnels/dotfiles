@@ -12,7 +12,9 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 files="inputrc Xresources bash_aliases tmux.conf "
 files+="vimrc vim/spell/en.utf-8.add vim/spell/de.utf-8.add "
 files+="gitconfig gitignore_global "
-files+="config/redshift.conf config/zathura/zathurarc xscreensaver"
+files+="config/redshift.conf config/zathura/zathurarc "
+files+="config/mc/ini config/mc/panels.ini "
+files+="xscreensaver"
 
 
 ## Take care of directories
