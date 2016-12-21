@@ -142,6 +142,7 @@ nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 " ##### vimtex (Latex) #####
 " ###########################
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_fold_enabled = 1
 
 " " modify environment mappings
 " let g:Tex_PromptedEnvironments =
