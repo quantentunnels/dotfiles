@@ -1,3 +1,4 @@
+PROMPT_DIRTRIM=2
 alias vim='vim --servername VIM'
 alias matlabhl='matlab -nosplash -nodesktop -nodisplay'
 alias matl='matlab -nosplash -nodesktop'
