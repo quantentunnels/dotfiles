@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=3.8
+Name=JabRef
+Comment=Graphical editor for BibTex bibliographies
+Comment[de]=Grafischer Editor für BibTex-Bibliographien
+Exec=java -jar /opt/JabRef.jar
+Icon=/home/marius/.jabref/icons/JabRef-icon.svg
+Terminal=false
+Type=Application
+Categories=Office;Database;
+MimeType=text/x-bibtex;
+Keywords=BibTex;

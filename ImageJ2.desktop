@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=2
+Name=ImageJ
+GenericName=ImageJ
+X-GNOME-FullName=ImageJ
+Comment=Scientific Image Analysis
+Type=Application
+Categories=Education;Science;ImageProcessing;
+Exec=/home/marius/Fiji/ImageJ-linux64 %F
+TryExec=/home/marius/Fiji/ImageJ-linux64
+Terminal=false
+StartupNotify=true
+MimeType=image/*;
+Icon=/home/marius/Fiji/images/icon.png
+StartupWMClass=sun-awt-X11-XFramePeer
