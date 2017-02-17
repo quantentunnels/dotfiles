@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'sirtaj/vim-openscad'
 
 "Language/Syntax support
 Plugin 'vim-pandoc/vim-pandoc'
