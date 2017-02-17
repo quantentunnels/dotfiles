@@ -14,14 +14,11 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'keith/tmux.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
-Plugin 'freitass/todo.txt-vim'
-Plugin 'sirtaj/vim-openscad'
 
 "Language/Syntax support
 Plugin 'vim-pandoc/vim-pandoc'
@@ -29,10 +26,12 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
-"Plugin 'quantentunnels/vim-ijmacro' "my ijmacro syntax plugin
 Plugin 'lervag/vimtex' "Latex compilation Plugin
-"Plugin 'Align' " requiered for ATP (line above)
 "Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
+Plugin 'keith/tmux.vim'
+Plugin 'freitass/todo.txt-vim'
+Plugin 'cmci/ImageJMacro_Highlighter'
+Plugin 'sirtaj/vim-openscad'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
