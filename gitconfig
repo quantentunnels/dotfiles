@@ -25,6 +25,8 @@
 	cmd = diffpdf \"$LOCAL\" \"$REMOTE\"
 [difftool "latexdiff"]
     cmd = git-latexdiff \"$LOCAL\" \"$REMOTE\"
+[difftool "imcompare"]
+    cmd = git-imcompare \"$LOCAL\" \"$REMOTE\"
 [diff "pdf"]
     textconv = pdf2text
     tool=pdfdiff
