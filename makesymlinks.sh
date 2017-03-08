@@ -13,7 +13,7 @@ files="inputrc Xresources bash_aliases tmux.conf "
 files+="vimrc vim/spell/en.utf-8.add vim/spell/de.utf-8.add "
 files+="gitconfig gitignore_global "
 files+="config/redshift.conf config/zathura/zathurarc "
-files+="config/mc/ini config/mc/panels.ini "
+files+="config/mpv/mpv.conf "
 files+="xscreensaver"
 
 
