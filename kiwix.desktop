@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Kiwix
+Comment=Offline reader for web content
+Exec=/opt/kiwix/kiwix
+Icon=/opt/kiwix/chrome/icons/default/main.ico
+Terminal=false
+Type=Application
+Categories=Education;
