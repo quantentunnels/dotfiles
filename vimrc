@@ -94,7 +94,7 @@ if has('gui_running')
     "set lines=45 
 else
     set t_Co=16 "use the 16 terminal colors
-    set background=dark
+    set background=light
 end
 colorscheme solarized
 
