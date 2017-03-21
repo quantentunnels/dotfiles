@@ -21,7 +21,7 @@ files+="xscreensaver"
 
 #create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
+mkdir -pv $olddir
 echo "done"
 
 #change to the dotfiles directory
@@ -32,6 +32,7 @@ echo "done"
 
 ## Backup old files and make symlinks
 
+#TODO check and creadte directories for files within .config, .vim, etc.
 #move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 nMoved=0
 for file in $files; do
@@ -55,7 +56,9 @@ fi
 vundlePath="~/.vim/bundle/Vundle.vim"
 if [ ! -e $vundlePath ]; then
     echo -n "Installing vim plugins... "
+    mkdir -pv $vundlePath
     git clone https://github.com/VundleVim/Vundle.vim.git $vundlePath
     vim +PluginInstall +qall
     echo "done"
 fi
+#TODO install german spell files?
