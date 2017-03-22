@@ -13,6 +13,7 @@ files="inputrc Xresources bash_aliases tmux.conf "
 files+="vimrc vim/spell/en.utf-8.add vim/spell/de.utf-8.add "
 files+="gitconfig gitignore_global "
 files+="config/redshift.conf config/zathura/zathurarc "
+files+="config/ranger/rc.conf "
 files+="config/mpv/mpv.conf "
 files+="xscreensaver"
 
@@ -21,7 +22,7 @@ files+="xscreensaver"
 
 #create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -pv $olddir
+mkdir -p $olddir
 echo "done"
 
 #change to the dotfiles directory
@@ -39,7 +40,7 @@ for file in $files; do
     if [ ! -L ~/.$file ]; then
         if [ -e ~/.$file ]; then
             echo -n "Moving old .$file to $olddir, "
-            mv ~/.$file ~/dotfiles_old/
+            mv -p ~/.$file ~/dotfiles_old/
             ((nMoved+=1))
         fi
         echo "Creating symlink to .$file"
@@ -53,7 +54,7 @@ if [ "$nMoved" -ge 1 ]; then
 fi
 
 ## Install vim plugins with Vundle
-vundlePath="~/.vim/bundle/Vundle.vim"
+vundlePath=~/.vim/bundle/Vundle.vim
 if [ ! -e $vundlePath ]; then
     echo -n "Installing vim plugins... "
     mkdir -pv $vundlePath
