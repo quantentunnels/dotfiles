@@ -10,3 +10,30 @@ alias l='ls --classify'
 alias clock='tty-clock -cC 4'
 source ~/bin/todo_completion
 PATH=$PATH:~/bioformats
+
+
+# Ranger snippets #
+# Compatible with ranger 1.4.2 through 1.7.*
+#
+# Automatically change the directory in bash after closing ranger
+#
+# This is a bash function for .bashrc to automatically change the directory to
+# the last visited one after ranger quits.
+# To undo the effect of this function, you can type "cd -" to return to the
+# original directory.
+
+function ranger-cd {
+    tempfile="$(mktemp)"
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
+
+# Change the prompt when you open a shell from inside ranger
+#
+# Add this line to your .bashrc for it to work.
+
+[ -n "$RANGER_LEVEL" ] && PS1="$PS1"'(ranger) '
