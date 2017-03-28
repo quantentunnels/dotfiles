@@ -30,7 +30,7 @@ Plugin 'lervag/vimtex' "Latex compilation Plugin
 "Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
 Plugin 'keith/tmux.vim'
 Plugin 'freitass/todo.txt-vim'
-Plugin 'cmci/ImageJMacro_Highlighter'
+Plugin 'quantentunnels/vim-ijmacro'
 Plugin 'sirtaj/vim-openscad'
 
 call vundle#end()            " required
