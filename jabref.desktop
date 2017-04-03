@@ -10,3 +10,4 @@ Type=Application
 Categories=Office;Database;
 MimeType=text/x-bibtex;
 Keywords=BibTex;
+StartWMClass=net-sf-jabref-JabRefMain;
