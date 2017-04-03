@@ -1,6 +1,7 @@
 PROMPT_DIRTRIM=2
 alias tmux='TERM=xterm-256color /usr/bin/tmux'
-alias vims='vim --servername VIM'
+alias ranger='PAGER=less ranger'
+alias vimtex='vim --servername VIM -p'
 alias matlabhl='matlab -nosplash -nodesktop -nodisplay'
 alias matl='matlab -nosplash -nodesktop'
 alias lc='ls --color=never'
