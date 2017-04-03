@@ -143,6 +143,10 @@ nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 " ###########################
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_fold_enabled = 1
+let g:vimtex_quickfix_open_on_warning = 0
+
+" " only a little indentation but tabstops stay longer
+autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 " " modify environment mappings
 " let g:Tex_PromptedEnvironments =
@@ -150,8 +154,6 @@ let g:vimtex_fold_enabled = 1
 " let g:Tex_HotKeyMappings =
 "     \ 'equation*,equation,bmatrix'
 " 
-" " only a little indentation but tabstops stay longer
-" autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 
 " ##### MATLAB #####
