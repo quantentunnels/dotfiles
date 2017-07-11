@@ -1,4 +1,5 @@
-set page-padding 20
+set page-padding 10
 set highlight-transparency 0.33
 set guioptions ""
-#set window-icon "~/.config/zathura/free-pdf.svg"
+set window-icon "~/.config/zathura/free-pdf.svg"
+set first-page-column 2
