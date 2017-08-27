@@ -19,18 +19,20 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 
 "Language/Syntax support
+Plugin 'majutsushi/tagbar'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'chikamichi/mediawiki.vim'
+"Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
 Plugin 'lervag/vimtex' "Latex compilation Plugin
 "Plugin '4Evergreen4/vim-hardy' "Arduino IDE integration
 Plugin 'keith/tmux.vim'
 Plugin 'freitass/todo.txt-vim'
-Plugin 'quantentunnels/vim-ijmacro'
+"Plugin 'quantentunnels/vim-ijmacro'
 Plugin 'sirtaj/vim-openscad'
 
 call vundle#end()            " required
@@ -148,12 +150,9 @@ let g:vimtex_quickfix_open_on_warning = 0
 " " only a little indentation but tabstops stay longer
 autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
-" " modify environment mappings
-" let g:Tex_PromptedEnvironments =
-"     \ 'equation,equation*,align,align*,$$,eqnarray*,eqnarray'
-" let g:Tex_HotKeyMappings =
-"     \ 'equation*,equation,bmatrix'
-" 
+" use tex highlighting for .tikz files
+autocmd BufRead,BufNewFile *.tikz set filetype=tex
+
 
 
 " ##### MATLAB #####
@@ -174,12 +173,12 @@ noremap Q <Nop>
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 " :Explore current directory to where the opend file resides in
 nnoremap <leader>E :E %:p:h<CR>
-" vim-latex save and compile
-nnoremap <F2> :w<CR><leader>ll
-" toggle search highlighting
-nnoremap <F9> :set hlsearch!<CR>
 " mute search highlighting
 nnoremap <silent> <C-p> :<C-u>nohlsearch<CR><C-p>
+" display Tagbar
+nnoremap <F8> :TagbarToggle<CR>
+" toggle search highlighting
+nnoremap <F9> :set hlsearch!<CR>
 " toogle Goyo
 nmap <F12> :Goyo<CR>
 

@@ -27,10 +27,11 @@ polydimethylsiloxane
 runtimes
 ## strains and species
 Escherichia
+coli
 E. coli
 Pseudomonas
-P. putida
 putida
+P. putida
 P. aeruginosa
 R. sphaeroides
 V. alginolyticus
@@ -67,7 +68,6 @@ centrosomes
 aeruginosa
 citronellis
 alginolyticus
-coli
 chemokinesis
 allosteric
 chemoreceptor
@@ -89,3 +89,7 @@ micrograph
 coverslip
 pausings
 multitrichous
+putida's
+amphitrichous
+cooperativity
+in-silico
