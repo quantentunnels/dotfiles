@@ -88,17 +88,16 @@ set spelllang=en_us,de_20   " set recognized languages
 " #################################
 
 " Colorscheme for Terminal
+colorscheme solarized
+set background=light
 if has('gui_running')
     let g:solarized_menu=0
-    set background=light
     set guifont=DejaVu\ Sans\ Mono\ 12
     "set columns=90
     "set lines=45 
 else
     set t_Co=16 "use the 16 terminal colors
-    set background=dark
 end
-colorscheme solarized
 
 "highligt current line
 set cursorline
