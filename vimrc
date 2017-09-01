@@ -102,13 +102,14 @@ end
 "highligt current line
 set cursorline
 
-" Show trailing whitespace and spaces before a tab:
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$\| \+\ze\t/
-" Todo, Fixme, etc.
-highlight fixme term=reverse cterm=reverse ctermfg=1 guifg=#dc322f
-"match fixme /TODO/
-match fixme /FIXME/
+" all of these do not seem to work
+" " Show trailing whitespace and spaces before a tab:
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\s\+$\| \+\ze\t/
+" " Todo, Fixme, etc.
+" highlight fixme term=reverse cterm=reverse ctermfg=1 guifg=#dc322f
+" "match fixme /TODO/
+" match fixme /FIXME/
 
 " ##### Airline #####
 "let g:airline_theme = 'solarized'
@@ -143,6 +144,7 @@ nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 " ##### vimtex (Latex) #####
 " ###########################
 let g:vimtex_view_method = 'zathura'
+"let g:vimtex_view_use_temp_files = 1
 let g:vimtex_fold_enabled = 1
 let g:vimtex_quickfix_open_on_warning = 0
 
