@@ -9,7 +9,7 @@ alias la='ls -l --almost-all --human-readable'
 alias ll='ls -1 --classify '
 alias l='ls --classify'
 alias clock='tty-clock -cC 4'
-source ~/bin/todo_completion
+alias t='todo-txt'
 PATH=$PATH:~/bioformats
 
 

@@ -16,7 +16,8 @@ files+="config/redshift.conf "
 files+="config/zathura/zathurarc config/zathura/free-pdf.svg "
 files+="config/ranger/rc.conf "
 files+="config/mpv/mpv.conf "
-files+="xscreensaver"
+files+="xscreensaver "
+files+="todo-txt/config"
 
 
 ## Take care of directories
