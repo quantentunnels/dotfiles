@@ -1,7 +1,7 @@
 PROMPT_DIRTRIM=2
 alias tmux='TERM=xterm-256color /usr/bin/tmux'
 alias ranger='PAGER=less ranger'
-alias vimtex='vim --servername VIM -p "+set spell"'
+alias vimtex='vim --servername VIM -p "+set nonumber" "+set spell"'
 alias matlabhl='matlab -nosplash -nodesktop -nodisplay'
 alias matl='matlab -nosplash -nodesktop'
 alias lc='ls --color=never'
@@ -10,6 +10,7 @@ alias ll='ls -1 --classify '
 alias l='ls --classify'
 alias clock='tty-clock -cC 4'
 alias t='todo-txt -d ~/.todo-txt/config'
+alias shorttree='tree --filelimit 10 -L 4'
 PATH=$PATH:~/bioformats
 
 

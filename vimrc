@@ -129,6 +129,8 @@ let g:airline_symbols.linenr = '␤'
 
 " ##### Goyo #####
 let g:goyo_linenr = 1
+let g:goyo_width = 85
+let g:goyo_height = "85%"
 
 " ##### Tmux #####
 let g:tmux_navigator_no_mappings = 1
