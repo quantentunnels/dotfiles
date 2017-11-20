@@ -69,8 +69,8 @@ set number  " show line numbers
 set scrolloff=3
 
 set smartindent " Automatische Einrückung (Globale Konfiguration)
-set smarttab
-set expandtab shiftwidth=4 tabstop=4 softtabstop=4 " always expand tabs to 4 spaces
+set smarttab expandtab
+set shiftwidth=4 tabstop=4 softtabstop=4 " always expand tabs to 4 spaces
 
 set ignorecase  " suche standardmäßig case insensitve
 set smartcase   " smart case bei der Suche mit /
@@ -148,6 +148,7 @@ nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
 let g:vimtex_view_method = 'zathura'
 "let g:vimtex_view_use_temp_files = 1
 let g:vimtex_fold_enabled = 1
+let g:vimtex_fold_manual = 1
 let g:vimtex_quickfix_open_on_warning = 0
 
 " " only a little indentation but tabstops stay longer
@@ -162,7 +163,10 @@ autocmd BufRead,BufNewFile *.tikz set filetype=tex
 " ##################
 
 " for the mlint compiler
-autocmd BufEnter *.m    compiler mlint 
+"autocmd BufEnter *.m    compiler mlint 
+
+" ##### tab separated file settings
+autocmd BufEnter *.tsv setlocal nosmarttab noexpandtab shiftwidth=16 tabstop=16 softtabstop=16
 
 " ##### vim-pandoc options #####
 " ########################
