@@ -34,7 +34,7 @@ Plugin 'keith/tmux.vim'
 Plugin 'freitass/todo.txt-vim'
 "Plugin 'quantentunnels/vim-ijmacro'
 Plugin 'sirtaj/vim-openscad'
-Plugin 'vim-scripts/workflowish'
+Plugin 'quantentunnels/workflowish'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
@@ -157,7 +157,6 @@ autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 " use tex highlighting for .tikz files
 autocmd BufRead,BufNewFile *.tikz set filetype=tex
-
 
 
 " ##### MATLAB #####
