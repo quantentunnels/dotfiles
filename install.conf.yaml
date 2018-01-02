@@ -1,0 +1,31 @@
+- defaults:
+    link:
+        relink: true
+        create: true
+
+- clean: ['~']
+
+- link:
+    #link dotfile folder to .dotfiles
+    ~/.dotfiles: ''
+    #dotfiles
+    ~/.bash_aliases:
+    ~/.config/mpv/mpv.conf:
+    ~/.config/ranger/rc.conf:
+    ~/.config/redshift.conf:
+    ~/.config/zathura/free-pdf.svg:
+    ~/.config/zathura/zathurarc:
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.inputrc:
+    ~/.tmux.conf:
+    ~/.todo-txt/config:
+    ~/.vim/spell/de.utf-8.add:
+    ~/.vim/spell/en.utf-8.add:
+    ~/.vimrc:
+    ~/.xscreensaver:
+    ~/.Xresources:
+    
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+    #somehow auto install Vundle.vim
