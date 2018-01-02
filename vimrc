@@ -25,7 +25,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-"Plugin 'chikamichi/mediawiki.vim'
+Plugin 'chikamichi/mediawiki.vim'
 Plugin 'sgeb/vim-matlab'
 Plugin 'djoshea/vim-matlab-fold' " TODO does the matlab folding even work?
 Plugin 'lervag/vimtex' "Latex compilation Plugin
@@ -34,6 +34,7 @@ Plugin 'keith/tmux.vim'
 Plugin 'freitass/todo.txt-vim'
 "Plugin 'quantentunnels/vim-ijmacro'
 Plugin 'sirtaj/vim-openscad'
+Plugin 'vim-scripts/workflowish'
 
 call vundle#end()            " required
 filetype plugin indent on     " required!
