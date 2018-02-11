@@ -16,10 +16,11 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'mileszs/ack.vim'
 
 "Language/Syntax support
 Plugin 'majutsushi/tagbar'
@@ -115,8 +116,8 @@ set cursorline
 " ##### Airline #####
 "let g:airline_theme = 'solarized'
 
-let g:airline_left_sep = '▶'
-let g:airline_right_sep= '◀'
+let g:airline_left_sep = '▒'
+let g:airline_right_sep= '▒'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -151,6 +152,16 @@ let g:vimtex_view_method = 'zathura'
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
 let g:vimtex_quickfix_open_on_warning = 0
+
+" define doc handler for n_K documentation lookup
+let g:vimtex_doc_handlers = ['Texdoc']
+function! Texdoc(context)
+  call vimtex#doc#make_selection(a:context)
+  if !empty(a:context.selected)
+    execute '!texdoc' a:context.selected '&'
+  endif
+  return 1
+endfunction
 
 " " only a little indentation but tabstops stay longer
 autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
