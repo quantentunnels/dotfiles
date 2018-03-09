@@ -10,6 +10,7 @@
     ~/.dotfiles: ''
     #dotfiles
     ~/.bash_aliases:
+    ~/.config/inkscape/palettes/Solarized.gpl:
     ~/.config/mpv/mpv.conf:
     ~/.config/ranger/rc.conf:
     ~/.config/redshift.conf:
