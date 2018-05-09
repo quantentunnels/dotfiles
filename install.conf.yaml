@@ -28,4 +28,6 @@
     
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-    #somehow auto install Vundle.vim
+  - rm -rf ~/.vim/bundle/Vundle.vim
+  - ['git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Installing Vundle]
+  - [vim +PluginInstall +quit +quit, Installing vim plugins]
