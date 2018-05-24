@@ -23,12 +23,15 @@
     ~/.todo-txt/config:
     ~/.vim/spell/de.utf-8.add:
     ~/.vim/spell/en.utf-8.add:
+    ~/.vim/spell/hun-de-DE-frami.utf-8.spl:
+    ~/.vim/spell/hun-de-DE.utf-8.spl:
     ~/.vimrc:
     ~/.xscreensaver:
     ~/.Xresources:
     
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+    #download and install Vundle.vim
   - rm -rf ~/.vim/bundle/Vundle.vim
   - ['git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Installing Vundle]
   - [vim +PluginInstall +quit +quit, Installing vim plugins]

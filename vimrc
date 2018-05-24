@@ -83,7 +83,7 @@ set splitright
 
 set laststatus=2    " alsways show statusline
 
-set spelllang=en_us,de_20   " set recognized languages
+set spelllang=en_us,hun-de-DE   " set recognized languages
 
 
 " ##### Colors & Highlighting #####
