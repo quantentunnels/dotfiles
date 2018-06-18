@@ -11,6 +11,9 @@ alias l='ls --classify'
 alias clock='tty-clock -cC 4'
 alias t='todo-txt -d ~/.todo-txt/config'
 alias shorttree='tree --filelimit 10 -L 4'
+
+alias sless='LESSOPEN="| highlight --out-format=ansi %s" less -MR '
+
 PATH=$PATH:~/bioformats
 
 

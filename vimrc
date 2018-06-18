@@ -23,7 +23,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'mileszs/ack.vim'
 
 "Language/Syntax support
-Plugin 'majutsushi/tagbar'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
