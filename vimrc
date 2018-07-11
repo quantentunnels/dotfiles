@@ -21,8 +21,10 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'mileszs/ack.vim'
+Plugin 'w0rp/ale'
 
 "Language/Syntax support
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
@@ -72,6 +74,9 @@ set scrolloff=3
 set smartindent " Automatische Einrückung (Globale Konfiguration)
 set smarttab expandtab
 set shiftwidth=4 tabstop=4 softtabstop=4 " always expand tabs to 4 spaces
+
+set listchars=eol:⏎,trail:·,tab:▷-
+
 
 set ignorecase  " suche standardmäßig case insensitve
 set smartcase   " smart case bei der Suche mit /
@@ -167,6 +172,10 @@ autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 " use tex highlighting for .tikz files
 autocmd BufRead,BufNewFile *.tikz set filetype=tex
+
+" ##### Python #####
+" ##################
+autocmd FileType python setlocal textwidth=79 "PEP 8 conformity
 
 
 " ##### MATLAB #####
