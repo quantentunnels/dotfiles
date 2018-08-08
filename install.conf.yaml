@@ -16,7 +16,7 @@
     ~/.config/redshift.conf:
     ~/.config/zathura/free-pdf.svg:
     ~/.config/zathura/zathurarc:
-    ~/.config/awesome/rc.lua: awesome.lua
+    ~/.config/awesome/rc.lua: awesome-wm/rc.lua
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.inputrc:

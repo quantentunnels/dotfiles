@@ -11,6 +11,23 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
+-- {{{ Mate-desktop packages
+-- shoud have the following packages installed:
+-- mate-control-center (gtk theme, icons, mouse/touch, volume, brightness)
+-- mate-power-manager (lid actions, display on/off)
+-- mate-media (volume)
+local autorunApps =
+{
+    "mate-volume-control-applet",
+    "mate-settings-daemon",         --
+    "mate-power-manager"           -- lid actions
+}
+
+for app = 1, #autorunApps do
+    awful.spawn.with_shell(autorunApps[app])
+end
+-- }}}
+
 -- Load Debian menu entries
 require("debian.menu")
 
@@ -64,12 +81,12 @@ awful.layout.layouts = {
     awful.layout.suit.tile.top,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.max,
+    -- awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.magnifier,
+    -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
