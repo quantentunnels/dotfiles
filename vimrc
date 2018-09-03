@@ -69,7 +69,7 @@ set wildignore+=tags
 
 syntax on   " syntax highlighting on
 set number  " show line numbers
-set scrolloff=3
+set scrolloff=2
 
 set smartindent " Automatische Einrückung (Globale Konfiguration)
 set smarttab expandtab
@@ -132,6 +132,13 @@ let g:airline_symbols.linenr = '␤'
 " disable whitespace checking
 "let g:airline#extensions#whitespace#enabled = 1
 "let g:airline#extensions#bufferline#enabled = 1
+
+" ##### ALE #####
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '○'
+"let g:ale_sign_info = '◇'
+"let g:ale_sign_style_error = '▲'
+"let g:ale_sign_style_warning = '△'
 
 " ##### Goyo #####
 let g:goyo_linenr = 1
