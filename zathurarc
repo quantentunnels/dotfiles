@@ -4,3 +4,5 @@ set guioptions ""
 set window-icon "~/.config/zathura/free-pdf.svg"
 set first-page-column 2
 set default-bg "#1A1A1A"
+set highlight-transparency 0.33
+set window-title-basename true
