@@ -18,9 +18,12 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- mate-media (volume)
 local autorunApps =
 {
+    "redshift-gtk",
     "mate-volume-control-applet",
-    "mate-settings-daemon",         --
-    "mate-power-manager"           -- lid actions
+    "mate-settings-daemon",
+    "mate-power-manager",           -- lid actions
+    "nm-applet",
+    --'setxkbmap -option "ctrl:swapcaps"',
 }
 
 for app = 1, #autorunApps do
@@ -74,13 +77,13 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
+    awful.layout.suit.tile,
+    awful.layout.suit.tile.left,
+    awful.layout.suit.floating,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
     -- awful.layout.suit.max,
