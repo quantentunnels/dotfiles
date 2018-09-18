@@ -64,3 +64,5 @@
 
 [credential "https://gitup.uni-potsdam.de"]
 	username = hintsche
+[credential]
+	helper = cache

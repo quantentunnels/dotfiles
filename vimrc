@@ -89,6 +89,10 @@ set laststatus=2    " alsways show statusline
 
 set spelllang=en_us,hun-de-DE   " set recognized languages
 
+" Printing
+set printoptions+=number:y
+set printheader=%<%f%h%m\ (%{strftime('%F\ %T')})%=Seite\ %N
+
 
 " ##### Colors & Highlighting #####
 " #################################
