@@ -14,7 +14,6 @@
     ~/.config/mpv/mpv.conf:
     ~/.config/ranger/rc.conf:
     ~/.config/redshift.conf:
-    ~/.config/zathura/free-pdf.svg:
     ~/.config/zathura/zathurarc:
     ~/.config/awesome/rc.lua: awesome-wm/rc.lua
     ~/.gitconfig:
@@ -35,7 +34,8 @@
     #download and install Vundle.vim
   - rm -rf ~/.vim/bundle/Vundle.vim
   - ['git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Installing Vundle]
-  - [vim +PluginInstall +quit +quit, Installing vim plugins]
+  - [vim +PluginInstall +quitall, Installing vim plugins]
+  - [vim -c "mkspell! ~/.vim/spell/en.utf-8.add" -c "mkspell! ~/.vim/spell/en.utf-8.add" +quitall, Generating vim spellfiles]
     # #install packages required for vimtex
     # - [sudo apt install latexmk, Installing latexmk for vimtex compiling]
     # - [sudo apt install zathura xdotool, Installing zathura for vimtex viewing]
