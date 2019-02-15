@@ -16,6 +16,7 @@
     ~/.config/redshift.conf:
     ~/.config/zathura/free-pdf.svg:
     ~/.config/zathura/zathurarc:
+    ~/.config/awesome/rc.lua: awesome-wm/rc.lua
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.inputrc:
@@ -23,10 +24,19 @@
     ~/.todo-txt/config:
     ~/.vim/spell/de.utf-8.add:
     ~/.vim/spell/en.utf-8.add:
+    ~/.vim/spell/hun-de-DE-frami.utf-8.spl:
+    ~/.vim/spell/hun-de-DE.utf-8.spl:
     ~/.vimrc:
     ~/.xscreensaver:
     ~/.Xresources:
     
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-    #somehow auto install Vundle.vim
+    #download and install Vundle.vim
+  - rm -rf ~/.vim/bundle/Vundle.vim
+  - ['git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Installing Vundle]
+  - [vim +PluginInstall +quit +quit, Installing vim plugins]
+    # #install packages required for vimtex
+    # - [sudo apt install latexmk, Installing latexmk for vimtex compiling]
+    # - [sudo apt install zathura xdotool, Installing zathura for vimtex viewing]
+

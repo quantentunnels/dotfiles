@@ -21,9 +21,10 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'mileszs/ack.vim'
+Plugin 'w0rp/ale'
 
 "Language/Syntax support
-Plugin 'majutsushi/tagbar'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'chikamichi/mediawiki.vim'
@@ -68,11 +69,14 @@ set wildignore+=tags
 
 syntax on   " syntax highlighting on
 set number  " show line numbers
-set scrolloff=3
+set scrolloff=2
 
 set smartindent " Automatische Einrückung (Globale Konfiguration)
 set smarttab expandtab
 set shiftwidth=4 tabstop=4 softtabstop=4 " always expand tabs to 4 spaces
+
+set listchars=eol:⏎,trail:·,tab:▷-
+
 
 set ignorecase  " suche standardmäßig case insensitve
 set smartcase   " smart case bei der Suche mit /
@@ -83,7 +87,11 @@ set splitright
 
 set laststatus=2    " alsways show statusline
 
-set spelllang=en_us,de_20   " set recognized languages
+set spelllang=en_us,hun-de-DE   " set recognized languages
+
+" Printing
+set printoptions+=number:y
+set printheader=%<%f%h%m\ (%{strftime('%F\ %T')})%=Seite\ %N
 
 
 " ##### Colors & Highlighting #####
@@ -129,6 +137,13 @@ let g:airline_symbols.linenr = '␤'
 "let g:airline#extensions#whitespace#enabled = 1
 "let g:airline#extensions#bufferline#enabled = 1
 
+" ##### ALE #####
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '○'
+"let g:ale_sign_info = '◇'
+"let g:ale_sign_style_error = '▲'
+"let g:ale_sign_style_warning = '△'
+
 " ##### Goyo #####
 let g:goyo_linenr = 1
 let g:goyo_width = 85
@@ -168,6 +183,10 @@ autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 " use tex highlighting for .tikz files
 autocmd BufRead,BufNewFile *.tikz set filetype=tex
+
+" ##### Python #####
+" ##################
+autocmd FileType python setlocal textwidth=79 "PEP 8 conformity
 
 
 " ##### MATLAB #####
